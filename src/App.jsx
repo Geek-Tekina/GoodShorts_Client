@@ -65,7 +65,7 @@ const App = () => {
     const fetchVideos = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/shorts?category=${selectedCategory}`
+          `https://goodshorts-server.onrender.com/api/shorts?category=${selectedCategory}`
         );
         setVideos(response.data.videos);
         setVisibleVideos(response.data.videos.slice(0, 10));
